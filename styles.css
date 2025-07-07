@@ -1,0 +1,41 @@
+/* === Advanced Selectors === */
+
+/* Child and Sibling Combinators
+
+    Elements can be accessed in different ways without referring to a class or id, some examples include:
+
+    1. > - the child combinator (selects an element that is one level of indentation down)
+    2. + - the adjacent sibling combinator (selects an element that is adjacent to the target, or on the same level of indentation)
+    3. ~ - the general sibling combinator (selects all sibling elements that are following the target)
+
+*/
+
+main div {
+  /* This would select all divs inside main (child and grand-child) */
+}
+
+/* === Child Combinator === */
+
+main > div {
+  /* This would select all divs with class "child" */
+}
+
+main > div > div {
+  /* This would select all divs with class "grand-child" */
+}
+
+/* === Adjacent Sibling Combinator === */
+
+.group1 + div {
+  /* This would select the div with the classes "child group2" */
+}
+
+.group1 + div + div {
+  /* This would select the div with classes "child group3" */
+}
+
+/* === General Sibling Combinator === */
+
+.group1 ~ div {
+  /* This would select all div siblings which would be "child group2" and "child group3" in this case */
+}
