@@ -141,3 +141,46 @@ main > div > div {
 ::after {
   /* Adds extra elements onto the page after an element */
 }
+
+/* === Attribute Selectors === */
+
+/*
+
+    Can be used to target specific attribute values, they are written differently as attributes are written by us, examples include:
+    1. [attribute] - selects any element where the attribute exists (value doesnt matter)
+    2. selector[attribute] - selects any selector where the attribute exists
+    3. [attribute="value"] - selects the specified attribute with the specific value
+    
+*/
+
+[src] {
+  /* This will target any element with the src attribute */
+}
+
+img[src] {
+  /* This will target only img elements that have an src attribute */
+}
+
+img[src="tree.jpg"] {
+  /* This will target only img elements with an src attribute that has the value of "tree.jpg" */
+}
+
+/* More General Attribute Selectors
+
+    1. [attribute^="value"] - Will match strings from the start (^=)
+    2. [attribute$="value"] - Will match strings from the end ($=)
+    3. [attribute*="value"] - Will match anywhere inside the string (*=)
+
+*/
+
+[class^="aus"] {
+  /* This will target any class attribute that begins with "aus" such as class="australia", class="austria" */
+}
+
+[src$=".jpg"] {
+  /* This will target any src attribute that ends in ".jpg", such as src="tree.jpg", src="dog.jpg" */
+}
+
+[for*="ill"] {
+  /* This will target any for attribute that has "ill" anywhere inside it, such as for="bill", for="ill", for="silly", for="jill" */
+}
