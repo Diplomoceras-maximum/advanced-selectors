@@ -39,3 +39,105 @@ main > div > div {
 .group1 ~ div {
   /* This would select all div siblings which would be "child group2" and "child group3" in this case */
 }
+
+/* === Pseudo Selectors === */
+
+/* Pseudo Classes
+
+    Pseudo classes can do a variety of things relating to the position on the page, the state of an element, or how a user is interacting with it, some examples include:
+    1. Dynamic and user action classes - make the page feel more dynamic and interactive
+    2. Structural classes - powerful way to select elements based on their position in the DOM
+
+*/
+
+/* Dynamic and User Action Pseudo Classes */
+
+:focus {
+  /* Applies to an element that is currently selected by the user */
+}
+
+:hover {
+  /* Will affect anything under the users mouse pointer (useful for buttons / drop-downs) */
+}
+
+:active {
+  /* Applies to elements that are currently being clicked (useful for interactive user feedback) */
+}
+
+:link {
+  /* Applies to unvisited links */
+}
+
+:visited {
+  /* Applies to links the user has already visited */
+}
+
+/* Structural Pseudo Classes */
+
+:root {
+  /* This represents the top level of the DOM (no parents and a good place for global CSS rules) */
+}
+
+:first-child {
+  /* Applies to the first child of an element */
+}
+
+:last-child {
+  /* Applies to the last child of an element */
+}
+
+:empty {
+  /* Applies to elements with no child elements at all */
+}
+
+:only-child {
+  /* Applies to elements that have no siblings */
+}
+
+/* :nth-child is more unique */
+
+:nth-child(5) {
+  /* Selects the 5th element */
+}
+
+:nth-child(3n) {
+  /* Selects every 3rd element */
+}
+
+:nth-child(3n + 3) {
+  /* Selects every 3rd element beginning with the 3rd */
+}
+
+:nth-child(even) {
+  /* Selects every even element */
+}
+
+/* Pseudo Elements
+
+    Pseudo elements affect parts of the HTML that are not directly elements themselves
+
+*/
+
+::marker {
+  /* Selects the numbers or bullet points of lists (<li> elements) */
+}
+
+::first-letter {
+  /* Style the first letter of some text */
+}
+
+::first-line {
+  /* Style the first line of some text */
+}
+
+::selection {
+  /* Styles the highlighting of text when user selects some text on the page */
+}
+
+::before {
+  /* Adds extra elements onto the page before an element */
+}
+
+::after {
+  /* Adds extra elements onto the page after an element */
+}
